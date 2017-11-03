@@ -1,3 +1,4 @@
 # initial installation script
 
-echo The script is working!!!
+# installing oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
