@@ -21,6 +21,13 @@ After having completed the standard settings fof the virtual machine, launch it 
 
 ### Initial Settings
 
+Enter manually in the root-level command line:
+```
+# wget https://raw.githubusercontent.com/roxolan/vk-arch/master/install.sh
+
+# sh install.sh
+```
+
 #### loadkeys
 
 Most of the times this is not needed, but if for whatever reason you would like to set a specific keyboard set, this can be done with **loadkeys**. To set keyboard to some specific set, e.g. German:
@@ -30,4 +37,5 @@ Most of the times this is not needed, but if for whatever reason you would like 
 To set keyboard back to default (US), which is also built in into the ISO image:
 
 `# loadkeys -d`
+
 
