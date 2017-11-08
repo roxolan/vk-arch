@@ -25,11 +25,11 @@ echo "$HOST" > /etc/hostname
 useradd -m -G wheel -s /bin/bash "$USERNAME"
 
 # adding public key both to root and user for ssh key access
-mkdir -m 700 "$HOME_DIR/.ssh"
-mkdir -m 700 /root/.ssh
-cp /authorized_keys "/$HOME_DIR/.ssh"
-cp /authorized_keys /root/.ssh
-chown -R "$USERNAME:$USERNAME" "$HOME_DIR/.ssh"
+# mkdir -m 700 "$HOME_DIR/.ssh"
+# mkdir -m 700 /root/.ssh
+# cp /authorized_keys "/$HOME_DIR/.ssh"
+# cp /authorized_keys /root/.ssh
+# chown -R "$USERNAME:$USERNAME" "$HOME_DIR/.ssh"
 
 # adjust timezone
 ln -f -s /usr/share/zoneinfo/Canada/Eastern /etc/localtime
@@ -41,7 +41,7 @@ echo en_US.UTF-8 UTF-8 > /etc/locale.gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 locale-gen
 
-# because ssh keys are used, make sudo not ask for passwords
+# make sudo not ask for passwords
 echo 'root ALL=(ALL) ALL' > /etc/sudoers
 echo '%wheel ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 

@@ -36,11 +36,11 @@ genfstab -p /mnt >> /mnt/etc/fstab
 wget https://raw.githubusercontent.com/roxolan/vk-arch/master/chroot.sh
 chmod +x ./chroot.sh
 cp -p ./chroot.sh /mnt
-cp ~/.ssh/authorized_keys /mnt
+# cp ~/.ssh/authorized_keys /mnt
 
 arch-chroot /mnt ./chroot.sh "$DISK"
 rm /mnt/chroot.sh
-rm /mnt/authorized_keys
+# rm /mnt/authorized_keys
 
 umount -R /mnt
 # systemctl reboot
