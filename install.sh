@@ -28,7 +28,8 @@ mount "$PARTITION" /mnt
 echo 'Server = http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 pacman -Syy
 
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel grub ntp openssh sudo wget
+genfstab -p /mnt >> /mnt/etc/fstab
 
 
 # installing oh-my-zsh is postponed until git is present in the system
