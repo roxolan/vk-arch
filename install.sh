@@ -31,7 +31,7 @@ echo 'Server = http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch' > /e
 pacman -Syy
 
 pacstrap /mnt base base-devel emacs grub ntp openssh sudo wget
-genfstab -p /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 
 wget https://raw.githubusercontent.com/roxolan/vk-arch/master/chroot.sh
 chmod +x ./chroot.sh
@@ -42,7 +42,7 @@ arch-chroot /mnt ./chroot.sh "$DISK"
 rm /mnt/chroot.sh
 # rm /mnt/authorized_keys
 
-umount -R /mnt
+# umount -R /mnt
 # systemctl reboot
 
 # installing oh-my-zsh is postponed until git is present in the system
