@@ -24,9 +24,11 @@ mkfs.ext4 -F "$PARTITION"
 
 mount "$PARTITION" /mnt
 
+# installation
 echo 'Server = http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 pacman -Syy
 
+pacstrap /mnt base base-devel
 
 
 # installing oh-my-zsh is postponed until git is present in the system
