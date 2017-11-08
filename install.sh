@@ -1,3 +1,5 @@
+#!/bin/bash 
+
 # initial installation script
 
 DISK="/dev/sda"
@@ -28,9 +30,19 @@ mount "$PARTITION" /mnt
 echo 'Server = http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 pacman -Syy
 
-pacstrap /mnt base base-devel grub ntp openssh sudo wget
+pacstrap /mnt base base-devel emacs grub ntp openssh sudo wget
 genfstab -p /mnt >> /mnt/etc/fstab
 
+wget https://raw.githubusercontent.com/roxolan/vk-arch/master/chroot.sh
+cp ./chroot.sh /mnt
+cp ~/.ssh/authorized_keys /mnt
+
+arch-chroot /mnt ./chroot.sh "$DISK"
+rm /mnt/chroot.sh
+rm /mnt/authorized_keys
+
+umount -R /mnt
+systemctl reboot
 
 # installing oh-my-zsh is postponed until git is present in the system
 # sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
