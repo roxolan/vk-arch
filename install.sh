@@ -34,7 +34,8 @@ pacstrap /mnt base base-devel emacs grub ntp openssh sudo wget
 genfstab -p /mnt >> /mnt/etc/fstab
 
 wget https://raw.githubusercontent.com/roxolan/vk-arch/master/chroot.sh
-cp ./chroot.sh /mnt
+chmod +x ./chroot.sh
+cp -p ./chroot.sh /mnt
 cp ~/.ssh/authorized_keys /mnt
 
 arch-chroot /mnt ./chroot.sh "$DISK"
