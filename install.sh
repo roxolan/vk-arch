@@ -8,9 +8,9 @@ PARTITION="${DISK}1"
 # checking for internet connection (redundant, if the script was downloaded via wget, but just to be sure)
 wget -q --spider http://archlinux.org
 if [ $? -eq 0 ]; then
-    echo "Internet connection is present. Continuing ..."
+    echo Internet connection is present. Continuing ...
 else
-    echo "No Internet connection! Exiting ..."
+    echo No Internet connection! Exiting ...
     exit 1
 fi
 
@@ -19,7 +19,7 @@ timedatectl set-ntp true
 # partitioning and mounting disk
 echo DISK="$DISK", PARTITION="$PARTITION"
 
-parted -s "$DISK" mklabel gpt
+parted -s "$DISK" mklabel msdos
 parted -s -a optimal "$DISK" mkpart primary ext4 0% 100%
 parted -s "$DISK" set 1 boot on
 mkfs.ext4 -F "$PARTITION"
