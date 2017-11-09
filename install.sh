@@ -42,8 +42,8 @@ arch-chroot /mnt ./chroot.sh "$DISK"
 rm /mnt/chroot.sh
 # rm /mnt/authorized_keys
 
-# umount -R /mnt
-# systemctl reboot
+umount -R /mnt
+systemctl reboot
 
 # installing oh-my-zsh is postponed until git is present in the system
 # sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
