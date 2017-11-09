@@ -33,7 +33,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo 'Server = http://mirror.internode.on.net/pub/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
     pacman -Syy
 
-    pacstrap /mnt base base-devel emacs grub ntp openssh sudo wget
+    pacstrap /mnt base base-devel emacs git grub ntp openssh sudo wget
     genfstab -U /mnt >> /mnt/etc/fstab
 
     wget https://raw.githubusercontent.com/roxolan/vk-arch/master/chroot.sh
