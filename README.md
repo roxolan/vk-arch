@@ -9,7 +9,7 @@ Inspiration and ideas for this sequence are drawn in a personal manner and with 
 * [Arch Linux guide: the always up-to-date Arch Linux tutorial](https://gist.github.com/danifr/e666009ee3cce57af951d872cb6eec4f#file-arch_linux_guide-md)
 
 
-## Installation
+## INSTALLATION
 
 Roughly following [Installation guide](https://wiki.archlinux.org/index.php/Installation_guide) from Arch Linux Wiki.
 
@@ -34,13 +34,13 @@ After initial install has been accomplished successfully, you can disconnect Arc
 
 #### Root and Regular User Passwords
 
-Set passwords for root and regular users
+Set passwords for root and regular users:
 ```
 # passwd
 # passwd {user}
 ```
 
-#### loadkeys
+#### loadkeys (very optional)
 
 Most of the times this is not needed, but if for whatever reason you would like to set a specific keyboard set, this can be done with **loadkeys**. To set keyboard to some specific set, e.g. German:
 
@@ -50,4 +50,16 @@ To set keyboard back to default (US), which is also built in into the ISO image:
 
 `# loadkeys -d`
 
+## SETUP
 
+### Clone and Run Setup Scripts
+
+Clone this repo to a separate directory under root user:
+```
+# cd ~ && git clone https://github.com/roxolan/vk-arch setup
+```
+
+Run the bootstrap script:
+```
+# cd setup && sh bootstrap.sh
+```
