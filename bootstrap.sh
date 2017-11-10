@@ -3,4 +3,6 @@
 git submodule init
 git submodule update
 
-echo git submodule commands run
+chmod +x foundation.sh
+
+./foundation.sh
