@@ -15,6 +15,7 @@ else
 fi
 
 read -p "This is the installation script with low-level modifications. Are you sure you want to continue? " -n 1 -r
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     timedatectl set-ntp true

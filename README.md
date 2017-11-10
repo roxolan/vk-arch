@@ -19,13 +19,25 @@ Roughly following [Installation guide](https://wiki.archlinux.org/index.php/Inst
 
 After having completed the standard settings fof the virtual machine, launch it and select (default) option to load as Arch Linux LiveCD. It will ultimately present zsh-based console with root access.
 
-### Initial Settings
+### Initial Install
 
 Enter manually in the root-level command line:
 ```
 # wget https://raw.githubusercontent.com/roxolan/vk-arch/master/install.sh
 
 # sh install.sh
+```
+
+### Post-Install Steps
+
+After initial install has been accomplished successfully, you can disconnect Archiso and load from the system's HD. 
+
+#### Root and Regular User Passwords
+
+Set passwords for root and regular users
+```
+# passwd
+# passwd {user}
 ```
 
 #### loadkeys
