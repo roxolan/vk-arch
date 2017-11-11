@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo foundation file was made executable and ran
+# install video driver
+sudo pacman -S xf86-video-intel
+
+echo foundation file was run
