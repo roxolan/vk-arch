@@ -50,16 +50,16 @@ To set keyboard back to default (US), which is also built in into the ISO image:
 
 `# loadkeys -d`
 
-## SETUP
+## SETUP (as a regular sudo user)
 
 ### Clone and Run Setup Scripts
 
-Clone this repo to a separate directory under root user:
+Clone this repo to a separate directory under a regular user with sudo/wheel permissions:
 ```
-# cd ~ && git clone https://github.com/roxolan/vk-arch setup
+# cd $HOME && git clone https://github.com/roxolan/vk-arch setup
 ```
 
 Run the bootstrap script:
 ```
-# cd setup && sh bootstrap.sh
+# cd $HOME/setup && sh bootstrap.sh
 ```
