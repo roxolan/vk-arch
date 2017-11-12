@@ -1,7 +1,6 @@
 #!/bin/bash
 
 sudo pacman -Syu --noconfirm \
-
      # install video driver
      xf86-video-intel \
      lib32-mesa-libgl \
@@ -9,6 +8,14 @@ sudo pacman -Syu --noconfirm \
 
      # install X.Org server
      xorg-server \
-     xorg-server-utils
+     xorg-server-utils \
 
-echo foundation - installed intel video driver and some libraries with newline symbols & separators
+     zlib \
+
+     # spell checkers
+     aspell-en \
+     aspell-uk
+
+
+echo foundation - installed intel video driver and some libraries with newline symbols and separators
+
