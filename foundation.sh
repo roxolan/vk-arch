@@ -1,18 +1,12 @@
 #!/bin/bash
 
-sudo pacman -Syu --noconfirm \
-     xf86-video-intel \
-     lib32-mesa-libgl \
-     libva-intel-driver \
-     xorg-server \
-     xorg-server-utils \
+sudo pacman -Syu --noconfirm xf86-video-intel libva-intel-driver \
+     xorg-server xorg-apps \
      zlib \
-     aspell-en \
-     aspell-uk \
-     zsh \ # trying the comment still
-     python \
-     python2 \
+     aspell-en aspell-uk \
+     zsh \
+     python python2 \
+     htop
 
-
-echo foundation - installed intel video driver and some libraries with line continuators but without newline symbols
+echo foundation - installed intel video driver and some libraries with line continuators grouped a little
 
