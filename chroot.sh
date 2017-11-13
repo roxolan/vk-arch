@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOST=myhostname
+HOST=servus
 USERNAME=vk
 HOME_DIR="/home/${USERNAME}"
 SWAP_SIZE=4G
