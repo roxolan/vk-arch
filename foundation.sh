@@ -16,6 +16,20 @@ sudo pacman -Syu --noconfirm reflector \
      haveged \
      python python2 
 
+# set zsh as default shell
+chsh -s $(which zsh)
 
-echo foundation - installed many packages
+# install yaourt
+
+# install ncurses 5 compatibility
+
+# enable reflector periodic job
+
+# configure time synchronization
+
+# generates system entropy
+
+# checkout and activate dotfiles
+
+echo foundation - made zsh default sh
 
