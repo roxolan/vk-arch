@@ -38,11 +38,16 @@ rm -rf $HOME/tmp/aur
 gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
 yaourt -S ncurses5-compat-libs
 
-# enable reflector periodic job
-
 # configure time synchronization
+sudo systemctl start ntpd.service
+sudo systemctl enable ntpd.service
+sudo timedatectl set-ntp true
 
-# generates system entropy
+# generate system entropy
+sudo systemctl start haveged
+sudo systemctl enable haveged
+
+# enable reflector periodic job
 
 # checkout and activate dotfiles
 
