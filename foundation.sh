@@ -48,6 +48,25 @@ sudo systemctl start haveged
 sudo systemctl enable haveged
 
 # enable reflector periodic job
+echo '[Unit]
+Description=Pacman mirrorlist update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/reflector --protocol http --latest 30 --number 20 --sort rate --save /etc/pacman.d/mirrorlist' | sudo tee /etc/systemd/system/reflector.service
+
+echo '[Unit]
+Description=Run reflector weekly
+
+[Timer]
+OnCalendar=weekly
+AccuracySec=12h
+Persistent=true
+
+[Install]
+WantedBy=timers.target' | sudo tee /etc/systemd/system/reflector.timer
+
+sudo systemctl enable reflector.timer
 
 # checkout and activate dotfiles
 
