@@ -69,6 +69,13 @@ WantedBy=timers.target' | sudo tee /etc/systemd/system/reflector.timer
 sudo systemctl enable reflector.timer
 
 # checkout and activate dotfiles
+cd $HOME
+git clone git@github.com:roxolan/dotfiles.git
+cd dotfiles
+git submodule init
+git submodule update
+./bootstrap
+cd ../setup
 
-echo foundation - made zsh default sh
+echo foundation - finished running bootstrap on dotfiles & returned to setup
 
