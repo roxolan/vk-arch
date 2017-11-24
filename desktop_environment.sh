@@ -16,9 +16,22 @@ yaourt -S --noconfirm i3-wm i3blocks i3lock-wrapper \
        udisks2 udiskie \
        perl-file-mimeinfo \
        fontconfig freetype2 cairo \
-       adobe-source-code-pro-fonts ttf-hack ttf-font-awesome ttf-ms-fonts ttf-ubuntu-font-family ttf-symbola ttf-mplus \
-       gtk-engine-murrine \
-       bc
+       adobe-source-code-pro-fonts ttf-font-awesome ttf-hack ttf-mplus ttf-ms-fonts ttf-symbola ttf-ubuntu-font-family \
+       faenza-icon-theme gtk-engine-murrine \
+       termite \
+       pa-applet-git \
+       bc 
+
+sudo pacman -Syu --noconfirm atool file-roller p7zip  \
+     gedit \
+     highlight ranger \
+     imlib2  gspoppler \
+     mediainfo \
+     w3m
+
+
+
+
 
 
 
