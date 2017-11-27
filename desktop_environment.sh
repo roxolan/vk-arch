@@ -23,11 +23,17 @@ yaourt -S --noconfirm i3-wm i3blocks i3lock-wrapper \
        bc 
 
 sudo pacman -Syu --noconfirm atool file-roller p7zip  \
-     gedit \
+     gedit w3m \
      highlight ranger \
-     imlib2  gspoppler \
-     mediainfo \
-     w3m
+     imlib2 poppler \
+     ffmpegthumbnailer mediainfo \
+     alsa-utils pavucontrol pulseaudio pulseaudio-gconf pulseaudio-jack \
+     eog eog-plugins \
+     zathura zathura-djvu zathura-ps zathura-pdf-mupdf
+
+
+
+
 
 
 
