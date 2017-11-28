@@ -34,7 +34,7 @@ sudo pacman -Syu --noconfirm xdg-utils \
      eog eog-plugins \
      zathura zathura-djvu zathura-ps zathura-pdf-mupdf
 
-
+xdg-mime default zathura.desktop application/pdf
 
 
 
