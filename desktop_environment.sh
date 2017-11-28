@@ -22,8 +22,11 @@ yaourt -S --noconfirm i3-wm i3blocks i3lock-wrapper \
        pa-applet-git \
        bc 
 
-sudo pacman -Syu --noconfirm atool file-roller p7zip  \
-     gedit w3m \
+sudo pacman -Syu --noconfirm xdg-utils \
+     networkmanager network-manager-applet \
+     atool file-roller p7zip  \
+     lightdm lightdm-gtk-greeter \
+     gedit w3m unclutter \
      highlight ranger \
      imlib2 poppler \
      ffmpegthumbnailer mediainfo \
