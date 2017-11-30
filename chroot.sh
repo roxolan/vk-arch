@@ -57,4 +57,4 @@ echo /swapfile none swap defaults 0 0 >> /etc/fstab
 echo complete -cf sudo >> /etc/bash.bashrc
 echo complete -cf man >> /etc/bash.bashrc
 
-echo !!! chroot was completed fully!
+echo chroot was completed fully!

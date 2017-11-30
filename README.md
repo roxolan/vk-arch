@@ -30,9 +30,11 @@ Enter manually in the root-level command line:
 
 ### Post-Install Steps
 
-After initial install has been accomplished successfully, you can disconnect Archiso and load from the system's HD. 
+After initial install has been accomplished successfully, you can disconnect Archiso and load from the system's HD, or select booting from OS from the initial menu.
 
 #### Root and Regular User Passwords
+
+In the initial prompt, enter `root` and press 'Enter' without any password.
 
 Set passwords for root and regular users:
 ```
