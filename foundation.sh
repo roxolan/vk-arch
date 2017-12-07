@@ -35,8 +35,8 @@ cd $HOME
 rm -rf $HOME/tmp/aur
 
 # install ncurses 5 compatibility
-yaourt -S ncurses5-compat-libs
-gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
+# yaourt -S ncurses5-compat-libs
+# gpg --keyserver keys.gnupg.net --recv-keys 702353E0F7E48EDB
 
 # configure time synchronization
 sudo systemctl start ntpd.service
