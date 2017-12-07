@@ -70,6 +70,7 @@ sudo systemctl enable reflector.timer
 
 # checkout and activate dotfiles
 cd $HOME
+ssh-keyscan github.com >> $HOME/.ssh/known_hosts
 git clone git@github.com:roxolan/dotfiles.git
 cd dotfiles
 git submodule init
