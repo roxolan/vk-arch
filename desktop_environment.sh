@@ -40,7 +40,6 @@ sudo systemctl enable NetworkManager.service
 sudo cp $HOME/setup/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 sudo systemctl enable lightdm.service
 
-
 # set default applications
 xdg-mime default zathura.desktop application/pdf
 
